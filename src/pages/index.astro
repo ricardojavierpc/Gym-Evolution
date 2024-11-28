@@ -2,9 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Welcome from "../sections/Welcome.astro";
+// import { Carrusel } from "../components/Carrusel.jsx";
+import Carrusel from "../sections/Carrusel.astro";
 ---
 
 <Layout title="Welcome to Astro.">
     <Header />
     <Welcome />
+    <!-- <Carrusel client:load/> -->
+     <Carrusel />
 </Layout>
