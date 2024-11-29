@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { ArrowRight } from './ArrowRight.jsx';
-import { ArrowLeft } from './ArrowLeft.jsx';
+import { ArrowRight } from '../navComponent/ArrowRight.jsx';
+import { ArrowLeft } from '../navComponent/ArrowLeft.jsx';
 
 
 export function CarruselDos() {
@@ -9,27 +9,27 @@ export function CarruselDos() {
             id: 1,
             url: '../../public/img-carrusel/prensa.webp',
             title: 'Sala de Musculación',
-            subtitle: 'Aquí es donde los débiles se vuelven fuertes y los fuertes,imparables. 🔥 Prepárate para sudar, levantar y romper tus propios récords. ¡Los músculos no se hacen solos! 🏋️‍♂️💥'
+            subtitle: 'El rincón perfecto para convertir calorías en fuerza.\n       ¡No garantizamos superpoderes, pero casi!'
         },
         {
             id: 2,
             url: '../../public/img-carrusel/spinning.webp',
-            title: 'Sala de Boxeo Donde los Guantes Hablan Más Fuerte',
-            subtitle: 'Prepárate para soltar golpes, liberar estrés y sentirte como un campeón. Aquí no solo se entrena el cuerpo, ¡se fortalece la mente! 🥇🔥'
+            title: 'Sala de spinning',
+            subtitle: 'Donde las ruedas giran y las calorías desaparecen.\n                       ¡Siente la adrenalina!'
 
         },
         {
             id: 3,
             url: '../../public/img-carrusel/boxeo.webp',
-            title: 'Sala de Spinning Pedalea al Ritmo del Éxito',
-            subtitle: 'Prepárate para una montaña rusa de energía y adrenalina. Subimos, bajamos y lo damos todo al ritmo de la música. ¡Vamos a quemar calorías como si no hubiera mañana! 🔥💦'
+            title: 'Sala de boxeo',
+            subtitle: 'Donde cada golpe libera estrés y cada round te acerca más a la victoria'
 
         },
         {
             id: 4,
             url: '../../public/img-carrusel/zumba.webp',
-            title: 'Clase de Zumba Bailando se Quema Mejor',
-            subtitle: 'Siente el ritmo, mueve el cuerpo y olvídate del estrés. ¡Aquí se viene a sudar, a reír y a quemar calorías al son de los mejores hits! 🕺💃'
+            title: 'Sala de zumba',
+            subtitle: '  Aquí no solo se suda, también se sonríe. \n¡Zumba, diversión y energía en cada paso!'
 
         }
     ];
@@ -38,24 +38,24 @@ export function CarruselDos() {
         {
 
             url: '../../public/img-carrusel/prensa_responsive.webp',
-            title: 'Sala de Boxeo Donde los Guantes Hablan Más Fuerte',
-            subtitle: 'Prepárate para soltar golpes, liberar estrés y sentirte como un campeón. Aquí no solo se entrena el cuerpo, ¡se fortalece la mente! 🥇🔥'
+            title: 'Sala de Musculación',
+            subtitle: 'El rincón perfecto para convertir calorías en fuerza.\n ¡No garantizamos superpoderes, pero casi!'
 
         },
         {
             url: '../../public/img-carrusel/spinning_responsive.webp',
-            title: 'Sala de Boxeo Donde los Guantes Hablan Más Fuerte',
-            subtitle: 'Prepárate para soltar golpes, liberar estrés y sentirte como un campeón. Aquí no solo se entrena el cuerpo, ¡se fortalece la mente! 🥇🔥'
+            title: 'Sala de spinning',
+            subtitle: 'Donde las ruedas giran y las calorías desaparecen.\n¡Siente la adrenalina!'
         },
         {
             url: '../../public/img-carrusel/boxeo_responsive.webp',
-            title: 'Sala de Boxeo Donde los Guantes Hablan Más Fuerte',
-            subtitle: 'Prepárate para soltar golpes, liberar estrés y sentirte como un campeón. Aquí no solo se entrena el cuerpo, ¡se fortalece la mente! 🥇🔥'
+            title: 'Sala de boxeo',
+            subtitle: 'Donde cada golpe libera estrés y cada round te acerca más a la victoria'
         },
         {
             url: '../../public/img-carrusel/zumba_responsive.webp',
-            title: 'Sala de Boxeo Donde los Guantes Hablan Más Fuerte',
-            subtitle: 'Prepárate para soltar golpes, liberar estrés y sentirte como un campeón. Aquí no solo se entrena el cuerpo, ¡se fortalece la mente! 🥇🔥'
+            title: 'Sala de zumba',
+            subtitle: '  Aquí no solo se suda, también se sonríe. \n¡Zumba, diversión y energía en cada paso!'
         }
 
     ]
@@ -128,14 +128,31 @@ export function CarruselDos() {
                 alt='Imagenes del carrusel'
             />
 
-            <div className={`bg-red-700 absolute md:top-1/2 md:left-0 md:w-full top-0 w-full md:h-full text-text-main
-                 flex flex-col justify-between py-2 md:gap-2`}>
-                <h1 className='md:text-3xl md:text-wrap md:text-left text-center font-bold text-2xl px-2'>
+            {/* desktop messages */}
+
+            <div className={`md:absolute md:top-1/2 md:left-0 top-0 w-full h-[250px] text-text-main bg-custom-gradient
+                 flex flex-col items-center justify-center py-2 md:gap-9 text-center`}>
+                <h1 className='md:text-3xl md:text-wrap text-center font-bold text-2xl px-2'>
                     {images[imgActual].title}
                 </h1>
+                <p className='md:text-left md:text-2xl md:text-wrap text-lg px-2 whitespace-pre-wrap text-center'>{images[imgActual].subtitle}</p>
 
-                {/* <p className='md:text-left md:text-2xl md:text-wrap text-center text-lg px-2'>{images[imgActual].subtitle}</p> */}
+                <button className='border border-steel-blue-600 w-56 h-14 rounded-md hover:bg-steel-blue-700 hover:border-black transition-all duration-300 ease-in-out'>Más info</button>
             </div>
+
+            {/* responsive messages */}
+            <div className={`md:hidden absolute top-1/2 left-0 w-full h-[250px] text-text-main bg-custom-gradient
+                 flex flex-col items-center justify-center py-2 gap-5 text-center`}>
+                <h1 className='text-center font-bold text-2xl px-2'>
+                    {imgResponsive[imgActualR].title}
+                </h1>
+                <p className='text-wrap text-lg px-2 whitespace-pre-wrap text-center'>
+                    {imgResponsive[imgActualR].subtitle}
+                </p>
+
+                <button className='border border-steel-blue-600 w-56 h-14 rounded-md hover:bg-steel-blue-700 hover:border-black transition-all duration-300 ease-in-out'>Más info</button>
+            </div>
+
 
             {/* buttons Desktop */}
             <button
