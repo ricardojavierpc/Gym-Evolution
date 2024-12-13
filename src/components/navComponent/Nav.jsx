@@ -13,10 +13,11 @@ export default function Nav() {
         <nav className="flex items-center z-50">
             {/* Menú de escritorio */}
             <ul className="text-xl gap-9 md:flex text-white hidden relative">
-                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="/">Inicio</a></li>
-                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="/">Tarifas</a></li>
-                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="/">Horario</a></li>
-                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="/">Contacto</a></li>
+                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#welcome">Inicio</a></li>
+                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#carrusel">Salas</a></li>
+                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#tarifas">Tarifas</a></li>
+                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#">Horario</a></li>
+                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#">Contacto</a></li>
             </ul>
 
             {/* Botón de hamburguesa */}
@@ -38,7 +39,7 @@ export default function Nav() {
                     <ul className="h-full flex flex-col items-center justify-center gap-3 text-steel-blue-50">
                         <li className={`hover:text-steel-blue-400 transition-all duration-300 ease-in-out 
                             ${isOpen ? 'animate-fade-left animate-duration-200 animate-delay-300 ' : ''}`}>
-                            <a href="/">
+                            <a href="#">
                                 Inicio
                             </a>
                         </li>
@@ -46,8 +47,18 @@ export default function Nav() {
                         <hr className="border-2 border-steel-blue-200 w-3/4" />
 
                         <li className={`hover:text-steel-blue-400 transition-all duration-300 ease-in-out 
+                            ${isOpen ? 'animate-fade-left animate-duration-200 animate-delay-300 ' : ''}`}>
+                            <a href="#carrusel">
+                                Salas
+                            </a>
+                        </li>
+
+                        <hr className="border-2 border-steel-blue-200 w-3/4" />
+
+
+                        <li className={`hover:text-steel-blue-400 transition-all duration-300 ease-in-out 
                             ${isOpen ? 'animate-fade-left animate-duration-300 animate-delay-300 ' : ''}`}>
-                            <a href="/">
+                            <a href="#tarifas">
                                 Tarifas
                             </a>
                         </li>
@@ -56,7 +67,7 @@ export default function Nav() {
 
                         <li className={`hover:text-steel-blue-400 transition-all duration-300 ease-in-out 
                             ${isOpen ? 'animate-fade-left animate-duration-500 animate-delay-300 ' : ''}`}>
-                            <a href="/">
+                            <a href="#">
                                 Horario
                             </a>
                         </li>
@@ -65,7 +76,7 @@ export default function Nav() {
 
                         <li className={`hover:text-steel-blue-400 transition-all duration-300 ease-in-out 
                             ${isOpen ? 'animate-fade-left animate-duration-700 animate-delay-300 ' : ''}`}>
-                            <a href="/">
+                            <a href="#">
                                 Contacto
                             </a>
                         </li>

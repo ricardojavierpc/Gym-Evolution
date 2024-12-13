@@ -1,52 +1,98 @@
+
 import { useState, useEffect } from "react"
+import React from "react";
 
 export function TarifasComponent() {
+    const infoCards = [
+        {
+            id: 1,
+            label: "Estandar",
+            price: "41$",
+            object: ["Sala de musculación", "Zumba", "Spinning"]
+        },
+        {
+            id: 2,
+            label: "Trimestral",
+            price: "107$",
+            object: ["Sala de musculación", "Zumba", "Spinning"]
 
-    const [isHover, setIshover] = useState(false);
+        },
+        {
+            id: 3,
+            label: "Anual",
+            price: "351$",
+            object: ["Sala de musculación", "Zumba", "Spinning"]
+        },
 
-    setInterval(() => {
-        setIshover(!isHover);
-    }, 3000)
+        { 
+            id: 4,
+            label: "Estandar Boxeo",
+            price: "30$",
+            object: ["Boxeo", "MMA", "Karate"]
 
+        }
+        ,
+
+        { 
+            id: 5,
+            label: "Judo junior",
+            price: "30$",
+            object: ["Judo", "Karate"]
+
+        }
+    ];
+
+    const [flippedCards, setFlippedCards] = useState([]);
+
+    const flipCard = (id) => {
+        setFlippedCards((prev) => prev.includes(id) ? prev.filter((cardId) => cardId !== id) : [...prev, id]
+        )
+    }
 
     return (
         <div className="w-full h-full flex flex-col  items-center bg-nav">
             {/* title Section */}
-            <h1 className="flex flex-grow justify-center items-center w-full text-text-main text-5xl font-bold">Tarifas</h1>
+            <h1 className="flex justify-center items-center w-full text-text-main text-5xl font-bold mt-10">Tarifas</h1>
 
             {/* Cards */}
-            <div className="flex flex-grow w-full gap-12 justify-center mt-10 text-4xl font-bold ">
+            <div className="flex flex-wrap md:flex-row flex-col w-full gap-5 justify-center text-4xl font-bold items-center mt-11">
                 {/* frontcard */}
-                <div className='h-[526px] w-[400px] bg-steel-blue-400 rounded-2xl flex justify-center items-center text-[#9E6C54] relative  overflow-hidden'
-                >
-                    Estandar
-                    {/* Reflejo */}
-                    <div
-                        className={`h-[700px] bg-white opacity-20 w-16 rotate-45 absolute -top-[600px] transition-all  duration-500 ease-in-out ${isHover ? "translate-y-[1100px]" : ""}`}
-                    ></div>
-                </div>
+                {infoCards.map((card) => (
+                    <div key={card.id} className={`h-[500px] sm:w-[400px] w-80 md:mx-10 flex-grow rounded-2xl flex justify-center items-center relative overflow-hidden cursor-pointer transition-all duration-300 ease-in-out
+                        ${flippedCards.includes(card.id) ? " bg-steel-blue-900 text-white" : "bg-steel-blue-400 text-[#222]"}
+                        `}
+                        onClick={() => flipCard(card.id)}
+                    >
+                        {!flippedCards.includes(card.id) && (
+                            <div className="flex justify-center flex-col items-center">
+                                <h2 className="h-60 flex items-center">{card.label}</h2>
 
-
-                <div className="h-[526px] w-[400px] bg-steel-blue-400 rounded-2xl flex justify-center items-center text-[#E3E4E5] relative overflow-hidden">
-                    Trimestral
-
-                    {/* Reflejo */}
-                    <div
-                        className={`h-[700px] bg-white opacity-20 w-16 rotate-45 absolute -top-[600px] transition-all  duration-500 ease-in-out ${isHover ? "translate-y-[1100px]" : ""} `}
-                    ></div>
-                </div >
-
-                <div className="h-[526px] w-[400px] bg-steel-blue-400 rounded-2xl flex justify-center items-center text-[#FFD700] relative overflow-hidden">
-                    Anual
-
-                    {/* Reflejo */}
-                    <div
-                        className={`h-[700px] bg-white opacity-20 w-16 rotate-45 absolute -top-[600px] transition-all  duration-500 ease-in-out ${isHover ? "translate-y-[1100px]" : ""} `}
-                    ></div>
-                </div>
+                                <button className="text-sm text-[#666]">Pulsa para más información</button>
+                            </div>
+                        )}
+                        {/* Reverse card */}
+                        {flippedCards.includes(card.id) && (
+                            <div className="w-full h-full text-white flex flex-col items-center px-3 py-5">
+                                <h2 className="flex-grow items-center text-center text-5xl mt-24">
+                                    Precio <span className="text-steel-blue-400">{card.price}</span>
+                                </h2>
+                                <nav className="flex flex-grow h-52">
+                                    <ul className="flex flex-col justify-around items-center text-2xl">
+                                        {card.object.map((item, index) => (
+                                            <li key={index}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </nav>
+                            </div>
+                        )}
+                    </div>
+                ))}
 
             </div>
-        </div >
+
+
+        </div>
+
     )
 
 };

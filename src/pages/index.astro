@@ -4,11 +4,27 @@ import Header from "../components/Header.astro";
 import Welcome from "../sections/Welcome.astro";
 import Carrusel from "../sections/Carrusel.astro";
 import Tarifas from "../sections/Tarifas.astro";
+import Horarios from "../sections/Horarios.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-    <Header />
-    <Welcome />
-    <Carrusel />
-    <Tarifas />
+<Layout title="Gym evolution - Beniel">
+    <section>
+        <Header />
+    </section>
+
+    <section id="welcome">
+        <Welcome />
+    </section>
+
+    <section id="carrusel">
+        <Carrusel />
+    </section>
+
+    <section id="tarifas">
+        <Tarifas />
+    </section>
+
+    <section id="horario">
+        <Horarios />
+    </section>
 </Layout>
