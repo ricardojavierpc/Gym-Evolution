@@ -16,7 +16,7 @@ export default function Nav() {
                 <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#welcome">Inicio</a></li>
                 <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#carrusel">Salas</a></li>
                 <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#tarifas">Tarifas</a></li>
-                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#">Horario</a></li>
+                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#horario">Horario</a></li>
                 <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#">Contacto</a></li>
             </ul>
 
@@ -67,7 +67,7 @@ export default function Nav() {
 
                         <li className={`hover:text-steel-blue-400 transition-all duration-300 ease-in-out 
                             ${isOpen ? 'animate-fade-left animate-duration-500 animate-delay-300 ' : ''}`}>
-                            <a href="#">
+                            <a href="#horario">
                                 Horario
                             </a>
                         </li>
