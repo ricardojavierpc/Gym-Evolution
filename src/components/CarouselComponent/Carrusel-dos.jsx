@@ -74,7 +74,6 @@ export function CarruselDos() {
         setDirection('');
         setTimeout(() => setDirection('right'), 0);
 
-
     };
 
     const prevIMG = () => {
@@ -83,7 +82,7 @@ export function CarruselDos() {
             changeIMG(images.length - 1);
         };
         setDirection('');
-        setTimeout(() => setDirection('right'), 0);
+        setTimeout(() => setDirection('left'), 0);
     };
 
     const nextIMGresponsive = () => {
@@ -101,7 +100,7 @@ export function CarruselDos() {
             changeIMGR(imgResponsive.length - 1);
         };
         setDirection('');
-        setTimeout(() => setDirection('right'), 0);
+        setTimeout(() => setDirection('left'), 0);
     };
 
     return (
