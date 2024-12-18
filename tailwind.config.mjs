@@ -21,6 +21,10 @@ export default {
 					'900': '#1b395f',
 					'950': '#12243f',
 				},
+				'main': '#2160A8',
+				'buttonsP': '#2160A8',
+				'hoverP': '#F25C05',
+				'details': '#F25C05',
 				'text-main': '#FAFAFA',
 				'nav': '#222222'
 			},

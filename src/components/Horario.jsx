@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Cross } from "./navComponent/Cross";
+import { CrossT } from "./Crosstable.jsx";
 
 export function Horario() {
     const infos = [
@@ -149,8 +149,8 @@ export function Horario() {
 
 
     return (
-        <div className="w-full h-full bg-nav text-white pt-20 flex flex-col items-center ">
-            <h2 className="md:text-5xl text-2xl font-bold md:mb-24 mb-9">Encuentra tu mejor momento</h2>
+        <div className="w-full h-full  text-white pt-20 flex flex-col items-center ">
+            <h2 className="md:text-5xl text-2xl font-bold md:mb-24 mb-9 text-[#2160A8]">Encuentra tu mejor momento</h2>
 
             {/* circles Desktop*/}
             <div className='md:flex md:flex-col lg:flex-row hidden flex-wrap gap-9 relative'>
@@ -158,37 +158,38 @@ export function Horario() {
                     <div key={item.id} className="flex flex-col items-center gap-6 transition-all duration-300 ease-in-out">
                         <button onClick={() => handleClick(item.id)}
                             className="flex flex-wrap w-[300px] h-[300px] xl:w-[390px] xl:h-[390px] rounded-[999px] relative overflow-hidden
-                        shadow-[8px_10px_17px_#cccccc]">
+                        shadow-2xl shadow-slate-700">
 
                             <img className="rounded-[999px] w-full h-full border-[3px]"
                                 src={item.url}
                                 alt={item.alt}
                             />
 
-                            <span className="flex justify-center items-center pb-72 lg:pb-48 md:pb-48 md:text-3xl xl:text-4xl xl:h-80 w-full absolute top-[60%] h-full bg-black bg-opacity-25 text-4xl lg:text-2xl font-bold transition-all duration-300 ease-in-out hover:scale-105">
+                            <span className="flex justify-center items-center pb-72 lg:pb-48 md:pb-48 md:text-3xl xl:text-4xl xl:h-80 w-full absolute top-[60%] h-full
+                             bg-black bg-opacity-25 text-4xl lg:text-2xl font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:text-[#F25C05]">
                                 {item.span}
                             </span>
                         </button>
 
-                        <h3 className="font-bold text-3xl">{item.titulo}</h3>
+                        <h3 className="font-bold text-3xl text-[#2160A8]">{item.titulo}</h3>
 
                         {/* POP UPs - desktop*/}
                         {isOpen === item.id && (
-                            <div key={item.id} className={`flex justify-center fixed bg-steel-blue-500 z-50 w-[90%] h-[80%] left-16 top-36 rounded-xl
+                            <div key={item.id} className={`flex justify-center fixed bg-[#FFFF] z-50 w-[90%] h-[80%] left-16 top-36 rounded-xl
                             ${isOpen === item.id ? 'animate-flip-up animate-once animate-duration-1000 animate-ease-in-out' : ''}
                             `}>
                                 <table className="w-[90%] h-[90%] m-auto">
-                                    <thead className="w-full border border-collapse border-gray-400">
-                                        <tr className="bg-steel-blue-400 ">
+                                    <thead className="w-full border border-collapse bg-[#2160A8]">
+                                        <tr className="text-[#F4F8FC]">
                                             <th className=" border">Día</th>
                                             <th className="border">Horario</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {item.horario.map((horario, index) => (
-                                            <tr>
-                                                <th className="border">{horario.dia}</th>
-                                                <th className="border">
+                                            <tr className="bg-[#F4F8FC] text-[#2D2D2D]">
+                                                <th className="border border-[#D1D1D1]">{horario.dia}</th>
+                                                <th className="border border-[#D1D1D1]">
                                                     {horario.hora}
                                                 </th>
                                             </tr>
@@ -201,7 +202,7 @@ export function Horario() {
                                 </table>
 
 
-                                <button className="absolute right-4 top-4" onClick={() => setIsOpen(null)}><Cross /></button>
+                                <button className="absolute right-4 top-4" onClick={() => setIsOpen(null)}><CrossT /></button>
                             </div>
                         )}
 
@@ -220,11 +221,12 @@ export function Horario() {
                                 src={otrasActividades.url}
                                 alt={otrasActividades.alt}
                             />
-                            <span className="flex justify-center items-center pb-72 lg:pb-48 md:pb-48 md:text-3xl xl:text-4xl xl:h-80 w-full absolute top-[60%] h-full bg-black bg-opacity-25 text-4xl lg:text-2xl font-bold transition-all duration-300 ease-in-out hover:scale-105">
+                            <span className="flex justify-center items-center pb-72 lg:pb-48 md:pb-48 md:text-3xl xl:text-4xl xl:h-80 w-full absolute top-[60%] 
+                            h-full bg-black bg-opacity-25 text-4xl lg:text-2xl font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:text-[#F25C05]">
                                 {otrasActividades.span}
                             </span>
                         </a>
-                        <h3 className="font-bold text-3xl">{otrasActividades.titulo}</h3>
+                        <h3 className="font-bold text-3xl text-[#2160A8]">{otrasActividades.titulo}</h3>
                     </div>
                 )}
 
@@ -246,21 +248,21 @@ export function Horario() {
 
                         {/* // POP Ups - responsive */}
                         {isOpenRes === item.id && (
-                            <div key={item.id} className={`flex justify-center fixed bg-steel-blue-500 z-50 w-full h-full left-0 top-0 rounded-xl
-                            ${isOpenRes === item.id ? 'animate-jump-in animate-once animate-ease-in-out' : ''}
+                            <div key={item.id} className={`flex justify-center fixed bg-[#FFFF] z-50 w-full h-full left-0 top-0 rounded-xl
+                            ${isOpenRes === item.id ? 'animate-flip-up animate-once animate-ease-in-out' : ''}
                             `}>
                                 <table className="w-[90%] h-[85%] m-auto">
-                                    <thead className="w-full border border-collapse border-gray-400">
-                                        <tr className="bg-steel-blue-400 ">
+                                    <thead className="w-full border border-collapse bg-[#2160A8]">
+                                        <tr className="text-[#F4F8FC]">
                                             <th className=" border">Día</th>
                                             <th className="border">Horario</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {item.horario.map((horario, index) => (
-                                            <tr>
-                                                <th className="border">{horario.dia}</th>
-                                                <th className="border">
+                                            <tr className="bg-[#F4F8FC] text-[#2D2D2D]">
+                                                <th className="border border-[#D1D1D1]">{horario.dia}</th>
+                                                <th className="border border-[#D1D1D1]">
                                                     {horario.hora}
                                                 </th>
                                             </tr>
@@ -273,7 +275,7 @@ export function Horario() {
                                 </table>
 
 
-                                <button className="absolute right-4 top-4" onClick={() => setIsOpenRes(null)}><Cross /></button>
+                                <button className="absolute right-4 top-4" onClick={() => setIsOpenRes(null)}><CrossT /></button>
                             </div>
                         )}
 

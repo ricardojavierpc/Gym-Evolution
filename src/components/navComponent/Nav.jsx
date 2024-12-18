@@ -12,13 +12,13 @@ export default function Nav() {
     return (
         <nav className="flex items-center z-50">
             {/* Menú de escritorio */}
-            <ul className="text-xl gap-9 md:flex text-white hidden relative">
-                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#welcome">Inicio</a></li>
-                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#carrusel">Salas</a></li>
-                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#tarifas">Tarifas</a></li>
-                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#horario">Horario</a></li>
-                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="#mapa">Mapa</a></li>
-                <li className="hover:text-steel-blue-400 transition-all duration-300 ease-in-out"><a href="https://wa.me/34677038873" target="_blank">Contacto</a></li>
+            <ul className="text-xl gap-9 md:flex text-white hidden relative font-bold">
+                <li className="hover:text-[#F25C05] transition-all duration-300 ease-in-out"><a href="#welcome">Inicio</a></li>
+                <li className="hover:text-[#F25C05]  transition-all duration-300 ease-in-out"><a href="#carrusel">Salas</a></li>
+                <li className="hover:text-[#F25C05]  transition-all duration-300 ease-in-out"><a href="#tarifas">Tarifas</a></li>
+                <li className="hover:text-[#F25C05]  transition-all duration-300 ease-in-out"><a href="#horario">Horario</a></li>
+                <li className="hover:text-[#F25C05]  transition-all duration-300 ease-in-out"><a href="#mapa">Mapa</a></li>
+                <li className="hover:text-[#F25C05]  transition-all duration-300 ease-in-out"><a href="https://wa.me/34677038873" target="_blank">Contacto</a></li>
             </ul>
 
             {/* Botón de hamburguesa */}
@@ -37,8 +37,8 @@ export default function Nav() {
 
                 {/* Contenido del menú */}
                 <div className="h-full">
-                    <ul className="h-full flex flex-col items-center justify-center gap-3 text-steel-blue-50">
-                        <li className={`hover:text-steel-blue-400 transition-all duration-300 ease-in-out 
+                    <ul className="h-full flex flex-col items-center justify-center gap-3 text-steel-blue-50 font-bold">
+                        <li className={`hover:text-[#68A4D9] transition-all duration-300 ease-in-out 
                             ${isOpen ? 'animate-fade-left animate-duration-200 animate-delay-300 ' : ''}`}>
                             <a href="#">
                                 Inicio
@@ -47,7 +47,7 @@ export default function Nav() {
 
                         <hr className="border-2 border-steel-blue-200 w-3/4" />
 
-                        <li className={`hover:text-steel-blue-400 transition-all duration-300 ease-in-out 
+                        <li className={`hover:text-[#68A4D9]  transition-all duration-300 ease-in-out 
                             ${isOpen ? 'animate-fade-left animate-duration-200 animate-delay-300 ' : ''}`}>
                             <a href="#carrusel">
                                 Salas
@@ -57,7 +57,7 @@ export default function Nav() {
                         <hr className="border-2 border-steel-blue-200 w-3/4" />
 
 
-                        <li className={`hover:text-steel-blue-400 transition-all duration-300 ease-in-out 
+                        <li className={`hover:text-[#68A4D9]  transition-all duration-300 ease-in-out 
                             ${isOpen ? 'animate-fade-left animate-duration-300 animate-delay-300 ' : ''}`}>
                             <a href="#tarifas">
                                 Tarifas
@@ -66,7 +66,7 @@ export default function Nav() {
 
                         <hr className="border-2 border-steel-blue-200 w-3/4" />
 
-                        <li className={`hover:text-steel-blue-400 transition-all duration-300 ease-in-out 
+                        <li className={`hover:text-[#68A4D9]  transition-all duration-300 ease-in-out 
                             ${isOpen ? 'animate-fade-left animate-duration-500 animate-delay-300 ' : ''}`}>
                             <a href="#horario">
                                 Horario
@@ -74,7 +74,7 @@ export default function Nav() {
                         </li>
                         <hr className="border-2 border-steel-blue-200 w-3/4" />
 
-                        <li className={`hover:text-steel-blue-400 transition-all duration-300 ease-in-out 
+                        <li className={`hover:text-[#68A4D9] transition-all duration-300 ease-in-out 
                         ${isOpen ? 'animate-fade-left animate-duration-500 animate-delay-300 ' : ''}`}>
                             <a href="#mapa">
                                 Mapa
@@ -83,7 +83,7 @@ export default function Nav() {
 
                         <hr className="border-2 border-steel-blue-200 w-3/4" />
 
-                        <li className={`hover:text-steel-blue-400 transition-all duration-300 ease-in-out 
+                        <li className={`hover:text-[#68A4D9] transition-all duration-300 ease-in-out 
                             ${isOpen ? 'animate-fade-left animate-duration-700 animate-delay-300 ' : ''}`}>
                             <a href="https://wa.me/34677038873" target="_blank">
                                 Contacto

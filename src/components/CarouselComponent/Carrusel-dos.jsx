@@ -131,12 +131,11 @@ export function CarruselDos() {
 
             <div className={`md:absolute md:top-1/2 md:left-0 top-0 w-full h-[250px] text-text-main bg-custom-gradient
                  flex flex-col items-center justify-center py-2 md:gap-9 text-center`}>
-                <h1 className='md:text-3xl md:text-wrap text-center font-bold text-2xl px-2'>
+                <h1 className='md:text-3xl md:text-wrap text-center font-bold text-2xl px-2 text-[#fafafa]'>
                     {images[imgActual].title}
                 </h1>
                 <p className='md:text-left md:text-2xl md:text-wrap text-lg px-2 whitespace-pre-wrap text-center'>{images[imgActual].subtitle}</p>
 
-                <button className='border border-steel-blue-600 w-56 h-14 rounded-md hover:bg-steel-blue-700 hover:border-black transition-all duration-300 ease-in-out'>Más info</button>
             </div>
 
             {/* responsive messages */}
@@ -149,30 +148,29 @@ export function CarruselDos() {
                     {imgResponsive[imgActualR].subtitle}
                 </p>
 
-                <button className='border border-steel-blue-600 w-56 h-14 rounded-md hover:bg-steel-blue-700 hover:border-black transition-all duration-300 ease-in-out'>Más info</button>
             </div>
 
 
             {/* buttons Desktop */}
             <button
-                className='md:absolute top-1/2 right-5 text-steel-blue-400 hover:text-steel-blue-950 transition-all ease-in-out duration-300 '
+                className='md:absolute top-1/2 right-5 text-[#2160A8] md:hover:text-[#F25C05] transition-all ease-in-out duration-300 '
                 onClick={nextIMG}>
                 <ArrowRight />
             </button>
             <button
-                className='md:absolute top-1/2 left-5 text-steel-blue-400 hover:text-steel-blue-950 transition-all ease-in-out duration-300 '
+                className='md:absolute top-1/2 left-5 text-[#2160A8] md:hover:text-[#F25C05] transition-all ease-in-out duration-300 '
                 onClick={prevIMG}>
                 <ArrowLeft />
             </button>
 
             {/* buttons responsive */}
             <button
-                className='md:hidden absolute top-1/2 right-5 text-steel-blue-400 hover:text-steel-blue-950 transition-all ease-in-out duration-300 '
+                className='md:hidden absolute top-1/2 right-5 text-[#2160A8]'
                 onClick={nextIMGresponsive}>
                 <ArrowRight />
             </button>
             <button
-                className='md:hidden absolute top-1/2 left-5 text-steel-blue-400 hover:text-steel-blue-950 transition-all ease-in-out duration-300 '
+                className='md:hidden absolute top-1/2 left-5 text-[#2160A8]'
                 onClick={prevIMGresponsive}>
                 <ArrowLeft />
             </button>
