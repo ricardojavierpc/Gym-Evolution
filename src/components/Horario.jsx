@@ -150,7 +150,7 @@ export function Horario() {
 
     return (
         <div className="w-full h-full bg-nav text-white pt-20 flex flex-col items-center ">
-            <h1 className="md:text-5xl text-2xl font-bold md:mb-24 mb-9">Encuentra tu mejor momento</h1>
+            <h2 className="md:text-5xl text-2xl font-bold md:mb-24 mb-9">Encuentra tu mejor momento</h2>
 
             {/* circles Desktop*/}
             <div className='md:flex md:flex-col lg:flex-row hidden flex-wrap gap-9 relative'>
@@ -170,7 +170,7 @@ export function Horario() {
                             </span>
                         </button>
 
-                        <h2 className="font-bold text-3xl">{item.titulo}</h2>
+                        <h3 className="font-bold text-3xl">{item.titulo}</h3>
 
                         {/* POP UPs - desktop*/}
                         {isOpen === item.id && (
@@ -224,7 +224,7 @@ export function Horario() {
                                 {otrasActividades.span}
                             </span>
                         </a>
-                        <h2 className="font-bold text-3xl">{otrasActividades.titulo}</h2>
+                        <h3 className="font-bold text-3xl">{otrasActividades.titulo}</h3>
                     </div>
                 )}
 
@@ -242,7 +242,7 @@ export function Horario() {
                             </span>
 
                         </button >
-                        <h2 className="font-bold text-2xl">{item.titulo}</h2>
+                        <h3 className="font-bold text-2xl">{item.titulo}</h3>
 
                         {/* // POP Ups - responsive */}
                         {isOpenRes === item.id && (
@@ -292,7 +292,7 @@ export function Horario() {
                             </span>
 
                         </a >
-                        <h2 className="font-bold text-2xl">{otrasActividadesRes.titulo}</h2>
+                        <h3 className="font-bold text-2xl">{otrasActividadesRes.titulo}</h3>
                     </div>
                 )}
 
