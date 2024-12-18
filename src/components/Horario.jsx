@@ -5,7 +5,7 @@ export function Horario() {
     const infos = [
         {
             id: 1,
-            url: "../../public/img-horario/musculacion-desktop.webp",
+            url: "/img-horario/musculacion-desktop.webp",
             alt: "imagen de musculacion",
             titulo: "Sala de musculación",
             span: "ver más",
@@ -34,7 +34,7 @@ export function Horario() {
         },
         {
             id: 2,
-            url: "../../public/img-horario/boxeo-desktop.webp",
+            url: "/img-horario/boxeo-desktop.webp",
             alt: "imagen de boxeo",
             titulo: "Boxeo",
             span: "ver más",
@@ -53,7 +53,7 @@ export function Horario() {
         },
         {
             id: 3,
-            url: "../../public/img-horario/otrasActividades-desktop.webp",
+            url: "/img-horario/otrasActividades-desktop.webp",
             alt: "imagen de otras actividades",
             titulo: "Otras actividades",
             span: "ver más",
@@ -65,7 +65,7 @@ export function Horario() {
     const infosResponsive = [
         {
             id: 1,
-            url: "../../public/img-horario/musculacion-responsive.webp",
+            url: "/img-horario/musculacion-responsive.webp",
             alt: "imagen de musculacion",
             titulo: "Sala de musculación",
             span: "ver más",
@@ -94,7 +94,7 @@ export function Horario() {
         },
         {
             id: 2,
-            url: "../../public/img-horario/boxeo-responsive.webp",
+            url: "/img-horario/boxeo-responsive.webp",
             alt: "imagen de boxeo",
             titulo: "Boxeo",
             span: "ver más",
@@ -113,7 +113,7 @@ export function Horario() {
         },
         {
             id: 3,
-            url: "../../public/img-horario/otrasActividades-responsive.webp",
+            url: "/img-horario/otrasActividades-responsive.webp",
             alt: "imagen de otras actividades",
             titulo: "Otras actividades",
             span: "ver más"
