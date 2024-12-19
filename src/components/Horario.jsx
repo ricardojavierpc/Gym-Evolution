@@ -175,19 +175,19 @@ export function Horario() {
 
                         {/* POP UPs - desktop*/}
                         {isOpen === item.id && (
-                            <div key={item.id} className={`flex justify-center fixed bg-[#FFFF] z-50 w-[90%] h-[80%] left-16 top-36 rounded-xl
+                            <div key={item.id} className={`flex justify-center fixed bg-[#ADB5BD] z-50 w-[90%] h-[80%] left-16 top-36 rounded-xl
                             ${isOpen === item.id ? 'animate-flip-up animate-once animate-duration-1000 animate-ease-in-out' : ''}
                             `}>
                                 <table className="w-[90%] h-[90%] m-auto">
-                                    <thead className="w-full border border-collapse bg-[#2160A8]">
-                                        <tr className="text-[#F4F8FC]">
+                                    <thead className="w-full border border-collapse bg-[#495057]">
+                                        <tr className="text-[#F4F8FC] font-roboto">
                                             <th className=" border">Día</th>
                                             <th className="border">Horario</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {item.horario.map((horario, index) => (
-                                            <tr className="bg-[#F4F8FC] text-[#2D2D2D]">
+                                            <tr className="bg-[#6C757D] text-[#CED4DA]">
                                                 <th className="border border-[#D1D1D1]">{horario.dia}</th>
                                                 <th className="border border-[#D1D1D1]">
                                                     {horario.hora}
@@ -249,19 +249,19 @@ export function Horario() {
 
                         {/* // POP Ups - responsive */}
                         {isOpenRes === item.id && (
-                            <div key={item.id} className={`flex justify-center fixed bg-[#FFFF] z-50 w-full h-full left-0 top-0 rounded-xl
+                            <div key={item.id} className={`flex justify-center fixed bg-[#ADB5BD] z-50 w-[95%] h-[95%] margin-auto top-5 rounded-xl
                             ${isOpenRes === item.id ? 'animate-flip-up animate-once animate-ease-in-out' : ''}
                             `}>
                                 <table className="w-[90%] h-[85%] m-auto">
-                                    <thead className="w-full border border-collapse bg-[#2160A8]">
-                                        <tr className="text-[#F4F8FC]">
+                                    <thead className="w-full border border-collapse bg-[#495057]">
+                                        <tr className="text-[#F4F8FC] font-roboto">
                                             <th className=" border">Día</th>
                                             <th className="border">Horario</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         {item.horario.map((horario, index) => (
-                                            <tr className="bg-[#F4F8FC] text-[#2D2D2D]">
+                                            <tr className="bg-[#6C757D] text-[#CED4DA]">
                                                 <th className="border border-[#D1D1D1]">{horario.dia}</th>
                                                 <th className="border border-[#D1D1D1]">
                                                     {horario.hora}
