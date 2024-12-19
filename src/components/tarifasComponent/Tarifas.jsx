@@ -52,14 +52,14 @@ export function TarifasComponent() {
     return (
         <div className="w-full h-full flex flex-col  items-center ">
             {/* title Section */}
-            <h1 className="flex justify-center items-center w-full text-[#F8F9FA] text-4xl font-bold font-mochiy mt-10">Tarifas</h1>
+            <h2 className="flex justify-center items-center w-full text-[#F8F9FA] text-5xl font-bold font-bebas mt-10">Tarifas</h2>
 
             {/* Cards */}
             <div className="flex flex-wrap md:flex-row flex-col w-full gap-5 justify-center text-4xl font-bold items-center mt-11">
                 {/* frontcard */}
                 {infoCards.map((card) => (
                     <div key={card.id} className={`h-[500px] sm:w-[400px] w-80 md:mx-10 flex-grow rounded-2xl 
-                        flex justify-center items-center relative overflow-hidden cursor-pointer transition-all duration-300 ease-in-out font-roboto
+                        flex justify-center items-center relative overflow-hidden cursor-pointer transition-all duration-300 ease-in-out 
                         ${flippedCards.includes(card.id) ? " bg-[#6C757D]" : "bg-[#ADB5BD] text-[#F8F9FA]"}
                         `}
                         onClick={() => flipCard(card.id)}

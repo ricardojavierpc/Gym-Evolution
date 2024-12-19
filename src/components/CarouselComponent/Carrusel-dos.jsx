@@ -131,20 +131,20 @@ export function CarruselDos() {
 
             <div className={`md:absolute md:top-1/2 md:left-0 top-0 w-full h-[250px] text-text-main
                  flex flex-col items-center justify-center py-2 md:gap-9 text-center`}>
-                <h1 className='md:text-3xl md:text-wrap text-center font-bold text-2xl px-2 text-[#F8F9FA] font-roboto'>
+                <h1 className='md:text-3xl md:text-wrap text-center font-bold text-2xl px-2 text-[#F8F9FA] '>
                     {images[imgActual].title}
                 </h1>
-                <p className='md:text-left md:text-2xl md:text-wrap text-lg px-2 whitespace-pre-wrap text-center text-[#DEE2E6] font-roboto'>{images[imgActual].subtitle}</p>
+                <p className='md:text-left md:text-2xl md:text-wrap text-lg px-2 whitespace-pre-wrap text-center text-[#DEE2E6] '>{images[imgActual].subtitle}</p>
 
             </div>
 
             {/* responsive messages */}
             <div className={`md:hidden absolute top-1/2 left-0 w-full h-[250px] text-text-main
                  flex flex-col items-center justify-center py-2 gap-5 text-center`}>
-                <h1 className='text-center font-bold text-2xl px-2 text-[#F8F9FA] font-roboto'>
+                <h1 className='text-center font-bold text-2xl px-2 text-[#F8F9FA] '>
                     {imgResponsive[imgActualR].title}
                 </h1>
-                <p className='text-wrap text-lg px-2 whitespace-pre-wrap text-center text-[#DEE2E6] font-roboto'>
+                <p className='text-wrap text-lg px-2 whitespace-pre-wrap text-center text-[#DEE2E6] '>
                     {imgResponsive[imgActualR].subtitle}
                 </p>
 

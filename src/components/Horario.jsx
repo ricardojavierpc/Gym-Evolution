@@ -150,10 +150,10 @@ export function Horario() {
 
     return (
         <div className="w-full h-full  text-white pt-20 flex flex-col items-center ">
-            <h2 className="md:text-4xl text-xl font-bold md:mb-24 mb-9 text-[#F8F9FA] font-mochiy">Encuentra tu mejor momento</h2>
+            <h2 className="md:text-5xl text-4xl font-bold md:mb-24 mb-9 text-[#F8F9FA] font-bebas">Encuentra tu mejor momento</h2>
 
             {/* circles Desktop*/}
-            <div className='md:flex md:flex-col lg:flex-row hidden flex-wrap gap-9 relative font-roboto'>
+            <div className='md:flex md:flex-col lg:flex-row hidden flex-wrap gap-9 relative '>
                 {otherElements.map((item) => (
                     <div key={item.id} className="flex flex-col items-center gap-6 transition-all duration-300 ease-in-out">
                         <button onClick={() => handleClick(item.id)}
@@ -180,7 +180,7 @@ export function Horario() {
                             `}>
                                 <table className="w-[90%] h-[90%] m-auto">
                                     <thead className="w-full border border-collapse bg-[#495057]">
-                                        <tr className="text-[#F4F8FC] font-roboto">
+                                        <tr className="text-[#F4F8FC] ">
                                             <th className=" border">Día</th>
                                             <th className="border">Horario</th>
                                         </tr>
@@ -213,7 +213,7 @@ export function Horario() {
                 {/* Other activities - link for other page */}
 
                 {otrasActividades && (
-                    <div className="flex flex-col items-center gap-6 font-roboto">
+                    <div className="flex flex-col items-center gap-6 ">
                         <a href="/otras-actividades" className="flex flex-wrap w-[300px] h-[300px] xl:w-[390px] xl:h-[390px] rounded-[999px] relative overflow-hidden
                         shadow-2xl shadow-slate-700">
                             <img
@@ -234,7 +234,7 @@ export function Horario() {
 
 
             {/* Responsive */}
-            <div className="md:hidden flex flex-col gap-5 font-roboto">
+            <div className="md:hidden flex flex-col gap-5 ">
                 {otherElementsRes.map((item) => (
                     <div key={item.id} className="flex flex-col items-center gap-7" >
                         <button onClick={() => handleClickRes(item.id)} className="flex justify-end gap-5 w-[300px] h-[300px] rounded-[999px] relative 
@@ -254,7 +254,7 @@ export function Horario() {
                             `}>
                                 <table className="w-[90%] h-[85%] m-auto">
                                     <thead className="w-full border border-collapse bg-[#495057]">
-                                        <tr className="text-[#F4F8FC] font-roboto">
+                                        <tr className="text-[#F4F8FC] ">
                                             <th className=" border">Día</th>
                                             <th className="border">Horario</th>
                                         </tr>
