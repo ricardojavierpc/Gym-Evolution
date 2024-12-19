@@ -65,7 +65,7 @@ export function CarruselDos() {
 
     const [imgActualR, changeIMGR] = useState(0);
 
-
+ 
 
     const nextIMG = () => {
         changeIMG(imgActual + 1);
