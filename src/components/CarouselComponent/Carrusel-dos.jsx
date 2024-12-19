@@ -129,22 +129,22 @@ export function CarruselDos() {
 
             {/* desktop messages */}
 
-            <div className={`md:absolute md:top-1/2 md:left-0 top-0 w-full h-[250px] text-text-main bg-custom-gradient
+            <div className={`md:absolute md:top-1/2 md:left-0 top-0 w-full h-[250px] text-text-main
                  flex flex-col items-center justify-center py-2 md:gap-9 text-center`}>
-                <h1 className='md:text-3xl md:text-wrap text-center font-bold text-2xl px-2 text-[#fafafa]'>
+                <h1 className='md:text-3xl md:text-wrap text-center font-bold text-2xl px-2 text-[#F8F9FA] font-roboto'>
                     {images[imgActual].title}
                 </h1>
-                <p className='md:text-left md:text-2xl md:text-wrap text-lg px-2 whitespace-pre-wrap text-center'>{images[imgActual].subtitle}</p>
+                <p className='md:text-left md:text-2xl md:text-wrap text-lg px-2 whitespace-pre-wrap text-center text-[#DEE2E6] font-roboto'>{images[imgActual].subtitle}</p>
 
             </div>
 
             {/* responsive messages */}
-            <div className={`md:hidden absolute top-1/2 left-0 w-full h-[250px] text-text-main bg-custom-gradient
+            <div className={`md:hidden absolute top-1/2 left-0 w-full h-[250px] text-text-main
                  flex flex-col items-center justify-center py-2 gap-5 text-center`}>
-                <h1 className='text-center font-bold text-2xl px-2'>
+                <h1 className='text-center font-bold text-2xl px-2 text-[#F8F9FA] font-roboto'>
                     {imgResponsive[imgActualR].title}
                 </h1>
-                <p className='text-wrap text-lg px-2 whitespace-pre-wrap text-center'>
+                <p className='text-wrap text-lg px-2 whitespace-pre-wrap text-center text-[#DEE2E6] font-roboto'>
                     {imgResponsive[imgActualR].subtitle}
                 </p>
 
@@ -153,24 +153,24 @@ export function CarruselDos() {
 
             {/* buttons Desktop */}
             <button
-                className='md:absolute top-1/2 right-5 text-[#2160A8] md:hover:text-[#F25C05] transition-all ease-in-out duration-300 '
+                className='md:absolute top-1/2 right-5 text-[#F8F9FA] md:hover:text-[#6C757D] transition-all ease-in-out duration-300 '
                 onClick={nextIMG}>
                 <ArrowRight />
             </button>
             <button
-                className='md:absolute top-1/2 left-5 text-[#2160A8] md:hover:text-[#F25C05] transition-all ease-in-out duration-300 '
+                className='md:absolute top-1/2 left-5 text-[#F8F9FA] md:hover:text-[#6C757D] transition-all ease-in-out duration-300 '
                 onClick={prevIMG}>
                 <ArrowLeft />
             </button>
 
             {/* buttons responsive */}
             <button
-                className='md:hidden absolute top-1/2 right-5 text-[#2160A8]'
+                className='md:hidden absolute top-1/2 right-5 text-[#F8F9FA]'
                 onClick={nextIMGresponsive}>
                 <ArrowRight />
             </button>
             <button
-                className='md:hidden absolute top-1/2 left-5 text-[#2160A8]'
+                className='md:hidden absolute top-1/2 left-5 text-[#F8F9FA]'
                 onClick={prevIMGresponsive}>
                 <ArrowLeft />
             </button>

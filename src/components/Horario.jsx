@@ -150,10 +150,10 @@ export function Horario() {
 
     return (
         <div className="w-full h-full  text-white pt-20 flex flex-col items-center ">
-            <h2 className="md:text-5xl text-2xl font-bold md:mb-24 mb-9 text-[#2160A8]">Encuentra tu mejor momento</h2>
+            <h2 className="md:text-4xl text-xl font-bold md:mb-24 mb-9 text-[#F8F9FA] font-mochiy">Encuentra tu mejor momento</h2>
 
             {/* circles Desktop*/}
-            <div className='md:flex md:flex-col lg:flex-row hidden flex-wrap gap-9 relative'>
+            <div className='md:flex md:flex-col lg:flex-row hidden flex-wrap gap-9 relative font-roboto'>
                 {otherElements.map((item) => (
                     <div key={item.id} className="flex flex-col items-center gap-6 transition-all duration-300 ease-in-out">
                         <button onClick={() => handleClick(item.id)}
@@ -166,12 +166,12 @@ export function Horario() {
                             />
 
                             <span className="flex justify-center items-center pb-72 lg:pb-48 md:pb-48 md:text-3xl xl:text-4xl xl:h-80 w-full absolute top-[60%] h-full
-                             bg-black bg-opacity-25 text-4xl lg:text-2xl font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:text-[#F25C05]">
+                             bg-black bg-opacity-50 text-4xl lg:text-2xl font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:text-[#6C757D]">
                                 {item.span}
                             </span>
                         </button>
 
-                        <h3 className="font-bold text-3xl text-[#2160A8]">{item.titulo}</h3>
+                        <h3 className="font-bold text-3xl text-[#F8F9FA]">{item.titulo}</h3>
 
                         {/* POP UPs - desktop*/}
                         {isOpen === item.id && (
@@ -213,20 +213,20 @@ export function Horario() {
                 {/* Other activities - link for other page */}
 
                 {otrasActividades && (
-                    <div className="flex flex-col items-center gap-6">
+                    <div className="flex flex-col items-center gap-6 font-roboto">
                         <a href="/otras-actividades" className="flex flex-wrap w-[300px] h-[300px] xl:w-[390px] xl:h-[390px] rounded-[999px] relative overflow-hidden
-                        shadow-[8px_10px_17px_#cccccc]">
+                        shadow-2xl shadow-slate-700">
                             <img
                                 className="rounded-[999px] w-full h-full border-[3px]"
                                 src={otrasActividades.url}
                                 alt={otrasActividades.alt}
                             />
                             <span className="flex justify-center items-center pb-72 lg:pb-48 md:pb-48 md:text-3xl xl:text-4xl xl:h-80 w-full absolute top-[60%] 
-                            h-full bg-black bg-opacity-25 text-4xl lg:text-2xl font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:text-[#F25C05]">
+                            h-full bg-black bg-opacity-50 text-4xl lg:text-2xl font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:text-[#6C757D]">
                                 {otrasActividades.span}
                             </span>
                         </a>
-                        <h3 className="font-bold text-3xl text-[#2160A8]">{otrasActividades.titulo}</h3>
+                        <h3 className="font-bold text-3xl text-[#F8F9FA]">{otrasActividades.titulo}</h3>
                     </div>
                 )}
 
@@ -234,17 +234,18 @@ export function Horario() {
 
 
             {/* Responsive */}
-            <div className="md:hidden flex flex-col gap-5 ">
+            <div className="md:hidden flex flex-col gap-5 font-roboto">
                 {otherElementsRes.map((item) => (
                     <div key={item.id} className="flex flex-col items-center gap-7" >
-                        <button onClick={() => handleClickRes(item.id)} className="flex justify-end gap-5 w-[300px] h-[300px] rounded-[999px] bg-red-700 relative overflow-hidden  shadow-[8px_10px_17px_#cccccc]">
+                        <button onClick={() => handleClickRes(item.id)} className="flex justify-end gap-5 w-[300px] h-[300px] rounded-[999px] relative 
+                        overflow-hidden  shadow-2xl shadow-slate-700">
                             <img className="rounded-[999px] w-full h-full border-[3px] flex " src={item.url} alt={item.alt} />
-                            <span className="flex justify-center items-center pb-52 w-full absolute top-[60%] h-full bg-black bg-opacity-25 text-3xl font-bold">
+                            <span className="flex justify-center items-center pb-52 w-full absolute top-[60%] h-full bg-black bg-opacity-50 text-3xl font-bold">
                                 {item.span}
                             </span>
 
                         </button >
-                        <h3 className="font-bold text-2xl">{item.titulo}</h3>
+                        <h3 className="font-bold text-2xl text-[#F8F9FA]">{item.titulo}</h3>
 
                         {/* // POP Ups - responsive */}
                         {isOpenRes === item.id && (
@@ -287,9 +288,9 @@ export function Horario() {
                 {/* Others activities - responsive */}
                 {otrasActividadesRes && (
                     <div className="flex flex-col items-center gap-7" >
-                        <a href="#" className="flex justify-end gap-5 w-[300px] h-[300px] rounded-[999px] bg-red-700 relative overflow-hidden  shadow-[8px_10px_17px_#cccccc]">
+                        <a href="#" className="flex justify-end gap-5 w-[300px] h-[300px] rounded-[999px] relative overflow-hidden  shadow-2xl shadow-slate-700">
                             <img className="rounded-[999px] w-full h-full border-[3px] flex " src={otrasActividadesRes.url} alt={otrasActividadesRes.alt} />
-                            <span className="flex justify-center items-center pb-52 w-full absolute top-[60%] h-full bg-black bg-opacity-25 text-3xl font-bold">
+                            <span className="flex justify-center items-center pb-52 w-full absolute top-[60%] h-full bg-black bg-opacity-50 text-3xl font-bold">
                                 {otrasActividadesRes.span}
                             </span>
 
