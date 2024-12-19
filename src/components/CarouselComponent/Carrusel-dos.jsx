@@ -63,7 +63,9 @@ export function CarruselDos() {
     const [imgActual, changeIMG] = useState(0);
     const [direction, setDirection] = useState('');
 
-    const [imgActualR, changeIMGR] = useState(0)
+    const [imgActualR, changeIMGR] = useState(0);
+
+
 
     const nextIMG = () => {
         changeIMG(imgActual + 1);
@@ -103,10 +105,11 @@ export function CarruselDos() {
         setTimeout(() => setDirection('left'), 0);
     };
 
+
     return (
         <div className={`w-full h-[500px] relative overflow-hidden
-        
-        `}>
+        `}
+        >
             <img
                 className={`hidden md:block w-full h-full object-cover 
                     ${direction === 'right' ? 'animate-fade-left animate-once animate-duration-1000 animate-ease-in-out' : ''}
